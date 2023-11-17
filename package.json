@@ -1,0 +1,24 @@
+{
+  "name": "varhub-ws-clent",
+  "version": "1.0.0",
+  "type": "module",
+  "module": "./dist/index.js",
+  "main": "./dist/index.js",
+  "typings": "./src/types/modules.d.ts",
+  "author": "dpohvar@gmail.com",
+  "scripts": {
+    "prepare": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "xjmapper": "github:flinbein/xjmapper#1.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.9.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  }
+}

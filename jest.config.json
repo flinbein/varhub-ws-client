@@ -1,0 +1,9 @@
+{
+	"preset": "ts-jest",
+	"testEnvironment": "jsdom",
+	"verbose": true,
+	"roots": ["src"],
+	"transform": {
+		"^.+\\.[tj]s?$": "ts-jest"
+	}
+}
