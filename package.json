@@ -1,13 +1,13 @@
 {
   "name": "varhub-ws-clent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "module": "./dist/index.js",
   "main": "./dist/index.js",
-  "typings": "./src/types/modules.d.ts",
+  "types": "./src/index.ts",
   "author": "dpohvar@gmail.com",
   "scripts": {
-    "prepare": "tsc",
+    "install": "tsc",
     "test": "jest"
   },
   "dependencies": {
