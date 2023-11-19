@@ -1,6 +1,6 @@
 {
   "name": "varhub-ws-clent",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "module": "./dist/index.js",
   "main": "./dist/index.js",
@@ -11,7 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "xjmapper": "github:flinbein/xjmapper#1.0.1"
+    "xjmapper": "github:flinbein/xjmapper#1.0.2"
   },
   "devDependencies": {
     "@types/jest": "^29.5.8",
