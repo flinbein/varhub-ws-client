@@ -1,5 +1,5 @@
 import { parse, serialize, XJData } from "xjmapper";
-import type { RoomDescription } from "./types/RoomDescription.js";
+import type { ModuleDescription } from "./types/ModuleDescription.js";
 
 
 interface EventSubscriber<T extends Record<string, unknown[]>> {
@@ -140,7 +140,7 @@ export default class VarhubClient<
 		this.#ws.close(4000, reason);
 	}
 	
-	async createRoom(data: {modules: Record<string, RoomDescription>}): Promise<string> {
+	async createRoom(data: {modules: Record<string, ModuleDescription>}): Promise<string> {
 		if (this.#state === "init" || this.#state === "closed") {
 			throw new Error(`'createRoom' not available in state '${this.#state}'`);
 		}
