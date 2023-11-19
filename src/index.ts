@@ -141,7 +141,7 @@ export default class VarhubClient<
 		this.#ws.close(4000, reason);
 	}
 	
-	async createRoom(data: {modules: Record<string, ModuleDescription>}): Promise<[string, string]> {
+	async createRoom(data: {modules: Record<string, ModuleDescription>, config?: any}): Promise<[string, string]> {
 		if (this.#state === "init" || this.#state === "closed") {
 			throw new Error(`'createRoom' not available in state '${this.#state}'`);
 		}
