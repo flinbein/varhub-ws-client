@@ -141,18 +141,18 @@ export default class VarhubClient<
 		this.#ws.close(4000, reason);
 	}
 	
-	async createRoom(data: {modules: Record<string, ModuleDescription>}): Promise<string> {
+	async createRoom(data: {modules: Record<string, ModuleDescription>}): Promise<[string, string]> {
 		if (this.#state === "init" || this.#state === "closed") {
 			throw new Error(`'createRoom' not available in state '${this.#state}'`);
 		}
-		return await this.#send("room", data as any) as string;
+		return await this.#send("room", data as any) as [string, string];
 	}
 	
-	async joinRoom(roomId: string, ...data: XJData[]): Promise<boolean> {
+	async joinRoom(roomId: string, hash: string|null, ...data: XJData[]): Promise<boolean> {
 		if (this.#state !== "ready") throw new Error("'joinRoom' available only in state 'ready'");
 		this.#setState("join");
 		try {
-			const success = await this.#send("join", roomId, ...data) as boolean;
+			const success = await this.#send("join", roomId, hash, ...data) as boolean;
 			if (!success) return false;
 			this.#roomId = roomId;
 			this.#setState("room");
