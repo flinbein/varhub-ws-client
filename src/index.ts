@@ -132,6 +132,7 @@ export default class VarhubClient<
 		
 		this.#ws.addEventListener("close", event => {
 			this.#setState("closed");
+			this.#eventBox.dispatch("close", [event.reason]);
 		}, {once: true});
 	}
 	
