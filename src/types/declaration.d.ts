@@ -49,6 +49,11 @@ declare module "varhub:room" {
 	export const close: (reason: string) => void
 }
 
+declare module "varhub:config" {
+	const value: any
+	export default value;
+}
+
 declare module "inner:timer" {
 	export const syncTime: () => number
 }
