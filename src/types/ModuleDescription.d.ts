@@ -3,7 +3,7 @@ export interface ModuleJsDescription {
 	type: "js",
 	source?: string,
 	evaluate?: boolean
-	hooks?: string[] | Record<string, string|boolean>
+	hooks?: string[] | Record<string, string|boolean> | "*"
 }
 export interface ModuleJsonDescription {
 	type: "json",
