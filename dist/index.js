@@ -1,3 +1,4 @@
+/// <reference path="./types/inner-server-modules.d.ts" />
 import { parse, serialize } from "xjmapper";
 function createEventBox() {
     const target = new EventTarget();

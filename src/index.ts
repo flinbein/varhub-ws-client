@@ -1,7 +1,8 @@
+/// <reference path="./types/inner-server-modules.d.ts" />
+
 import { parse, serialize, XJData } from "xjmapper";
 import type { ModuleDescription } from "./types/ModuleDescription.js";
 
-/// <reference path="./types/declaration.d.ts" />
 interface EventSubscriber<T extends Record<string, unknown[]>> {
 	on<E extends keyof T>(eventName: E, handler: (...args: T[E]) => void): void
 	once<E extends keyof T>(eventName: E, handler: (...args: T[E]) => void): void
