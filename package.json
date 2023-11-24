@@ -1,6 +1,6 @@
 {
   "name": "varhub-ws-clent",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "type": "module",
   "module": "./dist/index.js",
   "main": "./dist/index.js",

@@ -58,5 +58,7 @@ declare module "varhub:config" {
 }
 declare module "varhub-modules:*" {
 	import {ModuleDescription} from "varhub-ws-client";
+	const value: ModuleDescription
+	export default value;
 	export const __MODULE_FAKE__: ModuleDescription;
 }
