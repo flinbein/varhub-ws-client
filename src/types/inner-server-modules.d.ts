@@ -57,6 +57,7 @@ declare module "varhub:config" {
 	export default value;
 }
 
-declare module "inner:timer" {
-	export const syncTime: () => number
+declare module "varhub-modules:*" {
+	import {ModuleDescription} from "./ModuleDescription.js";
+	export const __FAKE_MODULE__: ModuleDescription;
 }

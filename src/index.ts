@@ -79,8 +79,16 @@ export default class VarhubClient<
 		}
 	);
 	
-	getRoomId(){
+	get roomId(){
 		return this.#roomId;
+	}
+	
+	get connectionUrl(){
+		return this.#ws.url;
+	}
+	
+	get af(){
+		return this.#ws.extensions;
 	}
 	
 	getState(): VarhubClientState {

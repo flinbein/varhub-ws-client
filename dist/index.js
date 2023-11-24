@@ -50,8 +50,14 @@ export default class VarhubClient {
         has: () => false,
         get: (t, method) => (...args) => this.call(method, ...args),
     });
-    getRoomId() {
+    get roomId() {
         return this.#roomId;
+    }
+    get connectionUrl() {
+        return this.#ws.url;
+    }
+    get af() {
+        return this.#ws.extensions;
     }
     getState() {
         return this.#state;

@@ -1,0 +1,10 @@
+{
+  "extends": "@parcel/config-default",
+  "resolvers": ["./parcel-plugins/varhub-source-dir-resolver.js", "..."],
+  "transformers": {
+    "varhub-source:*.{json,js}": ["./parcel-plugins/varhub-source-text-transformer.js", "..."],
+    "varhub-source:*.{ts,js}": ["@parcel/transformer-typescript-tsc", "..."],
+    "varhub-source:*": ["./parcel-plugins/varhub-source-text-transformer.js", "..."],
+    "varhub-modules:*": ["..."]
+  }
+}
