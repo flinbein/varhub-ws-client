@@ -56,8 +56,3 @@ declare module "varhub:config" {
 	const value: any
 	export default value;
 }
-
-declare module "varhub-modules:*" {
-	import {ModuleDescription} from "./ModuleDescription.js";
-	export const __FAKE_MODULE__: ModuleDescription;
-}

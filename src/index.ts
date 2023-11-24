@@ -3,6 +3,8 @@
 import { parse, serialize, XJData } from "xjmapper";
 import type { ModuleDescription } from "./types/ModuleDescription.js";
 
+export type { ModuleDescription };
+
 interface EventSubscriber<T extends Record<string, unknown[]>> {
 	on<E extends keyof T>(eventName: E, handler: (...args: T[E]) => void): void
 	once<E extends keyof T>(eventName: E, handler: (...args: T[E]) => void): void
